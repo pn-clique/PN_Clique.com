@@ -1,3 +1,6 @@
+import { image02 } from '@/assets/images'
+import { Phone } from 'lucide-react'
+import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
 
@@ -32,6 +35,12 @@ export default function Page() {
             Saiba mais
           </Link>
         </div>
+        <Image
+          src={image02}
+          alt="Image 02"
+          height={335}
+          className="h-[335px] w-full bg-contain bg-center rounded-3xl"
+        />
       </div>
 
       <p className="text-zinc-800 text-center">
@@ -39,7 +48,13 @@ export default function Page() {
         ficaremos felizes em colaborar. Basta preencher o formulário abaixo para
         iniciar essa jornada conosco.
       </p>
-      <Link href={'/'} className="text-center text-primary font-bold">
+      <Link
+        href={'/'}
+        className="text-center text-zinc-100 rounded-full w-full max-w-[200px] mx-auto active:scale-95 transition-all hover:bg-cyan-800 tracking-wide h-[50px] font-bold flex items-center gap-4 justify-center bg-primary"
+      >
+        <span className="p-2 bg-white rounded-full">
+          <Phone className="text-primary size-5" />
+        </span>
         Formulário
       </Link>
     </div>

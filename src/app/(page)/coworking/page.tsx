@@ -1,3 +1,5 @@
+import { image01 } from '@/assets/images'
+import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
 
@@ -33,6 +35,12 @@ export default function Page() {
             Saiba mais
           </Link>
         </div>
+        <Image
+          src={image01}
+          alt="Image 01"
+          height={335}
+          className="h-[335px] w-full bg-contain bg-center rounded-3xl"
+        />
       </div>
 
       <p className="text-zinc-800 text-center">
