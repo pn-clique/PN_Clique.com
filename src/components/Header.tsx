@@ -21,13 +21,13 @@ export default function Header() {
         <nav className="flex items-center gap-6">
           <Link
             href={'/'}
-            className={`text-lg active:scale-95 transition-all ${pathname === '/' && 'font-bold text-secondary'}`}
+            className={`text-lg text-secondary active:scale-95 transition-all ${pathname === '/' && 'font-bold text-lg text-secondary'}`}
           >
             Tecnologia
           </Link>
           <Link
             href={'coworking'}
-            className={`text-lg active:scale-95 transition-all ${pathname === '/coworking' && 'font-bold text-primary'}`}
+            className={`text-lg text-primary active:scale-95 transition-all ${pathname === '/coworking' && 'font-bold text-lg text-primary'}`}
           >
             Coworking
           </Link>

@@ -6,7 +6,7 @@ import React from 'react'
 export default function Page() {
   return (
     <div className="flex flex-col space-y-8">
-      <h1 className="text-primary text-5xl tracking-wide font-semibold">
+      <h1 className="text-primary text-4xl tracking-wide font-semibold leading-tight">
         Bem-vindo ao nosso espaço de coworking, onde flexibilidade e inovação se
         encontram.
       </h1>
@@ -17,7 +17,7 @@ export default function Page() {
       </p>
 
       <div className="relative bg-primary/15 rounded-3xl h-[335px] w-full">
-        <div className="bg-white border border-secondary shadow-md p-8 rounded-3xl absolute -top-20 max-w-[485px] w-full left-1/2 -translate-x-1/2 gap-4 flex flex-col">
+        <div className="bg-white border border-secondary shadow-md p-8 rounded-3xl absolute -top-20 max-w-[80%] w-full left-1/2 -translate-x-1/2 gap-4 flex flex-col">
           <h2 className="font-bold text-lg">Sala principal</h2>
 
           <p className="text-zinc-800 text-sm">
