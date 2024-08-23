@@ -1,3 +1,4 @@
-import Logo from './pn-logo.svg'
+import PN from './pn.svg'
+import Clique from './clique.svg'
 
-export { Logo }
+export { PN, Clique }

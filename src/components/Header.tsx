@@ -1,5 +1,5 @@
 'use client'
-import { Logo } from '@/assets/svgs'
+import { Clique, PN } from '@/assets/svgs'
 import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
@@ -9,13 +9,22 @@ export default function Header() {
   const pathname = usePathname()
   return (
     <header className="flex justify-start items-center gap-2 xl:gap-8 h-24">
-      <Image
-        src={Logo}
-        alt="PN Clique icon"
-        width={180}
-        height={50}
-        className="max-w-[140px] lg:max-w-[230px]"
-      />
+      <div className="flex gap-2 items-center">
+        <Image
+          src={PN}
+          alt="PN Clique icon"
+          width={80}
+          height={80}
+          className="max-w-[60px]"
+        />
+        <Image
+          src={Clique}
+          alt="PN Clique icon"
+          width={110}
+          height={80}
+          className="max-w-[120px] hidden md:flex"
+        />
+      </div>
       <div className="flex items-center gap-4">
         <div className="w-px h-6 xl:h-8 bg-zinc-400" />
         <nav className="flex items-center gap-4 xl:gap-6">
