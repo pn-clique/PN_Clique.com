@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   description:
     'Somos uma empresa de tecnologia especializada no desenvolvimento de soluções móveis e web, que impactam positivamente a vida de centenas de pessoas e empresas.',
   icons: {
-    icon: '/favicon.png',
+    icon: '/favicon.ico',
   },
 }
 
@@ -20,7 +20,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-PT">
-      <link href="/favicon.png" rel="icon" sizes="32x32" />
+      <link href="/favicon.ico" rel="icon" sizes="32x32" />
       <body className={inter.className}>{children}</body>
     </html>
   )
