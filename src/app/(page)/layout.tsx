@@ -8,23 +8,23 @@ import Link from 'next/link'
 
 export default function Layout({ children }: { children: ReactNode }) {
   return (
-    <main className="grid grid-cols-1 gap-8 lg:grid-cols-[1fr_1fr] xl:grid-cols-[1fr_682px]">
-      <section className="flex flex-1 flex-col gap-8 bg-white py-8 px-8 lg:px-10 xl:px-20 h-full xl:max-h-screen min-h-screen">
+    <main className="grid grid-cols-1 gap-20 lg:gap-4 xl:grid-cols-[1fr_40%]">
+      <section className="flex flex-1 flex-col gap-8 bg-white pt-8 px-8 md:px-20 xl:px-20 h-full ">
         <Header />
         {children}
         <Footer />
       </section>
 
-      <aside className="flex flex-col flex-1 bg-primary px-8 md:px-16 pt-24 xl:py-24 h-full xl::max-h-screen xl:min-h-screen">
+      <aside className="flex flex-col flex-1 bg-primary px-8 md:px-20 xl:px-20 pt-24 xl:py-24 h-full  xl:min-h-screen">
         <h2 className="text-white text-4xl tracking-wide font-semibold">
           Conheça a PN Clique
         </h2>
-        <p className="text-zinc-800 mt-11 max-w-[551px] w-full">
+        <p className="text-zinc-800 mt-11 xl:max-w-[551px] w-full">
           Somos uma empresa de tecnologia especializada no desenvolvimento de
           soluções móveis e web, que impactam positivamente a vida de centenas
           de pessoas e empresas.
         </p>
-        <div className="w-full flex gap-8 flex-wrap mt-10">
+        <div className="w-full flex gap-8 justify-between flex-wrap mt-10">
           <AboutItem
             title="+10.000"
             description="Pessoas impactadas direita ou indiretamente"
@@ -39,7 +39,7 @@ export default function Layout({ children }: { children: ReactNode }) {
           />
         </div>
 
-        <div className="hidden xl:flex w-full mt-8 lg:mt-28 h-px bg-zinc-600" />
+        <div className="hidden xl:flex w-full mt-8 lg:mt-28 h-px bg-zinc-500" />
         <h4 className="font-bold text-xl text-white mt-8 tracking-wide">
           Siga-nos nas redes
         </h4>

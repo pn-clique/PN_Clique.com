@@ -17,10 +17,10 @@ export default function Page() {
       </p>
 
       <div className="relative bg-primary/15 rounded-3xl h-[335px] w-full">
-        <div className="bg-white border border-secondary shadow-md p-8 rounded-3xl absolute -top-20 max-w-[80%] w-full left-1/2 -translate-x-1/2 gap-4 flex flex-col">
-          <h2 className="font-bold text-lg">Sala principal</h2>
+        <div className="bg-white/90 border border-secondary shadow-md px-8 py-4 rounded-3xl absolute -top-20 max-w-[80%] w-full left-1/2 -translate-x-1/2 flex flex-col">
+          <h2 className="font-bold text-lg mb-2">Sala principal</h2>
 
-          <p className="text-zinc-800 text-sm">
+          <p className="text-zinc-800 text-sm mb-3">
             Aqui, você encontrará um ambiente profissional e colaborativo, ideal
             para impulsionar sua produtividade e criatividade. Aproveite nossas
             salas modernas e bem equipadas, com total suporte tecnológico, para

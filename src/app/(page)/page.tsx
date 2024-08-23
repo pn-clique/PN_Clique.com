@@ -7,7 +7,7 @@ import Link from 'next/link'
 import React, { useEffect, useState } from 'react'
 
 export default function Page() {
-  const [slides, setSlides] = useState<string | StaticImport>('')
+  const [slides, setSlides] = useState<string | StaticImport>(image02)
   const [time, setTime] = useState(0)
 
   function handleBefore() {
@@ -31,17 +31,17 @@ export default function Page() {
       setTimeout(() => {
         setTime(1)
         setSlides(image01)
-      }, 2000)
+      }, 3000)
     } else if (time === 1) {
       setTimeout(() => {
         setTime(2)
         setSlides(image02)
-      }, 2000)
+      }, 3000)
     } else if (time === 2) {
       setTimeout(() => {
         setTime(0)
         setSlides(BiskatoBanner)
-      }, 2000)
+      }, 3000)
     }
     // if (time === 0) {
     //   setSlides(image01)
@@ -64,8 +64,8 @@ export default function Page() {
         moderno.{' '}
       </p>
 
-      <div className="relative bg-primary/15 rounded-3xl h-[335px] w-full">
-        <div className="bg-white border border-secondary shadow-md px-8 py-4 rounded-3xl absolute -top-20 max-w-[80%] w-full left-1/2 -translate-x-1/2 flex flex-col">
+      <div className="relative rounded-3xl h-[335px] w-full">
+        <div className="bg-white/90 border border-secondary shadow-md px-8 py-4 rounded-3xl absolute -top-20 max-w-[80%] w-full left-1/2 -translate-x-1/2 flex flex-col z-30">
           <h2 className="font-bold text-lg mb-1">Biskato</h2>
 
           <p className="text-zinc-800 text-sm mb-3">
@@ -86,11 +86,11 @@ export default function Page() {
           src={slides}
           alt="Image 02"
           height={335}
-          className="h-[335px] w-full bg-contain bg-center rounded-3xl transition-colors ease-linear"
+          className="h-[335px] w-full bg-contain bg-center rounded-3xl transition-colors animate-sideways ease-in delay-0 duration-1000"
         />
       </div>
 
-      <div className="w-full flex gap-8 items-center justify-between px-10">
+      <div className="w-full flex gap-8 items-center justify-between px-4 xl:px-10">
         <div className="items-center gap-4 hidden">
           <button
             onClick={handleBefore}
@@ -119,20 +119,22 @@ export default function Page() {
         </div>
       </div>
 
-      <p className="text-zinc-800 text-center">
-        Se tiver uma ideia ou projeto que deseja transformar em realidade,
-        ficaremos felizes em colaborar. Basta preencher o formulário abaixo para
-        iniciar essa jornada conosco.
-      </p>
-      <Link
-        href={'/'}
-        className="text-center text-zinc-100 rounded-full w-full max-w-[200px] mx-auto active:scale-95 transition-all hover:bg-cyan-800 tracking-wide  h-[48px] font-bold flex items-center gap-4 justify-center bg-primary"
-      >
-        <span className="p-2 bg-white rounded-full">
-          <Phone className="text-primary size-5" />
-        </span>
-        Formulário
-      </Link>
+      <div className="w-full flex flex-col xl:flex-row gap-6 xl:gap-20 xl:px-8">
+        <p className="text-zinc-800 text-start">
+          Se tiver uma ideia ou projeto que deseja transformar em realidade,
+          ficaremos felizes em colaborar. Basta preencher o formulário abaixo
+          para iniciar essa jornada conosco.
+        </p>
+        <Link
+          href={'/'}
+          className="text-center text-zinc-100 rounded-full w-full max-w-[160px] mx-auto active:scale-95 transition-all hover:bg-cyan-800 tracking-wide  h-[48px] font-bold flex items-center gap-4 justify-center bg-primary"
+        >
+          <span className="p-2 bg-white rounded-full">
+            <Phone className="text-primary size-5" />
+          </span>
+          Formulário
+        </Link>
+      </div>
     </div>
   )
 }
