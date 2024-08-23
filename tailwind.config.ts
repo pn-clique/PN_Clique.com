@@ -11,9 +11,9 @@ const config: Config = {
       keyframes: {
         sideways: {
           '0%': {
-            opacity: '1',
+            opacity: '.1',
           },
-          '60%': { opacity: '.1' },
+          '60%': { opacity: '1' },
         },
       },
       colors: {
