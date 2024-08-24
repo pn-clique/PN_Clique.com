@@ -8,7 +8,7 @@ import { usePathname } from 'next/navigation'
 export default function Header() {
   const pathname = usePathname()
   return (
-    <header className="flex justify-start items-center gap-2 xl:gap-8 h-24">
+    <header className="fixed lg:absolute z-50 w-[84%] bg-primary rounded-xl px-8 flex justify-between items-center gap-2 xl:gap-8 h-24">
       <div className="flex gap-2 items-center">
         <Image
           src={PN}
@@ -26,17 +26,17 @@ export default function Header() {
         />
       </div>
       <div className="flex items-center gap-4">
-        <div className="w-px h-6 xl:h-8 bg-zinc-400" />
+        {/* <div className="w-px h-6 xl:h-8 bg-zinc-400" /> */}
         <nav className="flex items-center gap-4 xl:gap-6">
           <Link
             href={'/'}
-            className={`text-lg text-secondary active:scale-95 transition-all ${pathname === '/' && 'font-bold text-xl text-secondary -translate-y-1 ease-linear'}`}
+            className={`text-lg text-secondary active:scale-95 transition-all ${pathname === '/' && 'font-bold text-xl text-secondary scale-105 ease-linear'}`}
           >
             Tecnologia
           </Link>
           <Link
             href={'coworking'}
-            className={`text-lg text-primary active:scale-95 transition-transform ${pathname === '/coworking' && 'font-bold text-xl text-primary -translate-y-1 ease-linear'}`}
+            className={`text-lg text-white active:scale-95 transition-transform ${pathname === '/coworking' && 'font-bold text-xl text-primary scale-105 ease-linear'}`}
           >
             Coworking
           </Link>

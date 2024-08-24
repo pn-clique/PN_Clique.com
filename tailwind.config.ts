@@ -24,7 +24,7 @@ const config: Config = {
         'banner-pattern-01': 'url(/image01.png)',
       },
       animation: {
-        sideways: 'sideways 3s linear infinite',
+        sideways: 'sideways 3s linear',
       },
     },
   },
