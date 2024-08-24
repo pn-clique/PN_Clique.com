@@ -17,7 +17,7 @@ export default function Page() {
       </p>
 
       <div className="relative bg-primary/15 rounded-3xl h-[335px] w-full">
-        <div className="bg-white/90 border border-primary shadow-md px-8 py-4 rounded-3xl absolute -top-20 max-w-[80%] lg:max-w-[50%] w-full left-1/2 -translate-x-1/2 flex flex-col">
+        <div className="bg-white/90 border border-primary shadow-md px-4 md:px-8 py-4 rounded-3xl absolute -top-20 max-w-[80%] lg:max-w-[50%] w-full left-1/2 -translate-x-1/2 flex flex-col">
           <h2 className="font-bold text-lg mb-2 text-center lg:text-start">
             Sala principal
           </h2>

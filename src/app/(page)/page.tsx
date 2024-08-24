@@ -72,19 +72,21 @@ export default function Page() {
       </p>
 
       <div className="relative rounded-3xl h-[335px] w-full">
-        <div className="bg-white/90 border border-secondary shadow-md px-8 py-4 rounded-3xl absolute -top-20 max-w-[80%] w-full left-1/2 -translate-x-1/2 flex flex-col z-30">
-          <h2 className="font-bold text-lg mb-1">Biskato</h2>
+        <div className="bg-white/90 border border-secondary shadow-md px-4 md:px-8 py-4 rounded-3xl absolute -top-20 max-w-[80%] w-full left-1/2 -translate-x-1/2 flex flex-col z-30">
+          <h2 className="font-bold text-lg mb-1 text-center lg:text-start">
+            Biskato
+          </h2>
 
-          <p className="text-zinc-800 text-sm mb-3">
-            Transforme seu conhecimento em uma fonte de renda. Nesta inovadora
-            plataforma que conecta freelancers e clientes de forma eficiente e
-            segura, simplificando a gestão do trabalho autônomo.
+          <p className="text-zinc-800 text-sm mb-3 text-center lg:text-start">
+            Esta é uma inovadora plataforma que conecta freelancers e clientes
+            de forma eficiente e segura, simplificando a gestão do trabalho
+            autônomo.
           </p>
 
           <Link
             href={'/'}
             target="_blank"
-            className="text-secondary active:scale-95 transition-all"
+            className="text-secondary active:scale-95 transition-all text-center lg:text-start"
           >
             Saiba mais
           </Link>

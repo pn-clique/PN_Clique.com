@@ -8,14 +8,14 @@ import { usePathname } from 'next/navigation'
 export default function Header() {
   const pathname = usePathname()
   return (
-    <header className="fixed lg:absolute z-50 w-[84%] bg-primary rounded-xl px-8 flex justify-between items-center gap-2 xl:gap-8 h-24">
+    <header className="fixed lg:absolute z-50 w-[84%] bg-primary rounded-xl px-4 md:px-8 flex justify-between items-center gap-2 xl:gap-8 h-24">
       <div className="flex gap-2 items-center">
         <Image
           src={PN}
           alt="PN Clique icon"
           width={80}
           height={80}
-          className="max-w-[60px]"
+          className="max-w-[50px] md:max-w-[60px]"
         />
         <Image
           src={Clique}
