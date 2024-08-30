@@ -7,11 +7,13 @@ interface AboutItemProps {
 
 export default function AboutItem({ title, description }: AboutItemProps) {
   return (
-    <div className="w-full flex flex-col justify-center lg:items-center gap-2 max-w-[240px]">
-      <span className="text-4xl text-secondary font-semibold tracking-wide text-center lg:text-start">
+    <div className="w-full max-w-[232px] flex flex-col justify-center lg:items-center gap-1 lg:gap-3">
+      <span className="text-2xl lg:text-4xl text-secondary tracking-wide text-center font-extrabold">
         {title}
       </span>
-      <p className="text-zinc-100 lg:text-center text-center">{description}</p>
+      <p className="text-zinc-100 text-center text-sm lg:text-base">
+        {description}
+      </p>
     </div>
   )
 }

@@ -1,52 +1,55 @@
-import { image01 } from '@/assets/images'
-import Image from 'next/image'
-import Link from 'next/link'
-import React from 'react'
+'use client'
+import { Instagram } from '@/assets/svgs'
+import Button from '@/components/Button'
+import Social from '@/components/Social'
+import { useSearchParams } from 'next/navigation'
+import { useEffect, useState } from 'react'
 
 export default function Page() {
+  const searchParams = useSearchParams()
+  const [show, setShow] = useState(false)
+
+  useEffect(() => {
+    if (searchParams.toString().includes('true')) {
+      setShow(true)
+    } else {
+      setShow(false)
+    }
+  }, [searchParams])
+
   return (
-    <div className="flex flex-col space-y-8 mt-[120px]">
-      <h1 className="text-primary text-4xl tracking-wide font-semibold leading-tight text-center lg:text-start">
-        Bem-vindo ao nosso espaço de coworking, onde flexibilidade e inovação se
-        encontram.
+    <div
+      data-show={show}
+      className="relative flex flex-col mt-8 lg:mt-[60px] data-[show=true]:hidden data-[show=true]:lg:flex"
+    >
+      <span className="text-secondary text-sm lg:text-xl mb-0 md:mb-2 tracking-wide font-semibold">
+        Coworking
+      </span>
+      <h1 className="text-primary text-4xl lg:text-5xl tracking-wide font-semibold leading-relaxed max-w-[571px] w-full">
+        Bem-vindo ao nosso espaço de coworking
       </h1>
-      <p className="text-zinc-800 pb-[70px] text-center lg:text-start">
-        Nosso escritório está totalmente equipado para atender às suas
-        necessidades, seja para trabalhar remotamente, realizar reuniões de
-        negócios, ou ministrar formações e aulas.
+      <p className="max-w-[864px] w-full text-white text-base md:text-xl mt-4 lg:mt-10 pr-4 lg:pr-0">
+        Aqui, você encontrará um ambiente profissional e colaborativo, ideal
+        para impulsionar sua produtividade e criatividade. Aproveite nossas
+        salas modernas e bem equipadas, com total suporte tecnológico, para
+        fazer o seu trabalho fluir.
       </p>
-
-      <div className="relative bg-primary/15 rounded-3xl h-[335px] w-full">
-        <div className="bg-white/90 border border-primary shadow-md px-4 md:px-8 py-4 rounded-3xl absolute -top-20 max-w-[80%] lg:max-w-[50%] w-full left-1/2 -translate-x-1/2 flex flex-col">
-          <h2 className="font-bold text-lg mb-2 text-center lg:text-start">
-            Sala principal
-          </h2>
-
-          <p className="text-zinc-800 text-sm text-center lg:text-start mb-4">
-            Aproveite nossas salas modernas e bem equipadas, com total suporte
-            tecnológico, para fazer o seu trabalho fluir.
-          </p>
-
-          <Link
-            href={'/'}
-            target="_blank"
-            className="text-white bg-primary p-2 rounded-xl max-w-[180px] hover:bg-cyan-900 w-full flex justify-center items-center mx-auto active:scale-95 transition-all"
-          >
-            RESERVAR AGORA
-          </Link>
-        </div>
-        <Image
-          src={image01}
-          alt="Image 01"
-          height={335}
-          className="h-[335px] w-full bg-contain bg-center rounded-3xl aspect-video object-cover"
-        />
+      <div
+        data-show={show}
+        className="hidden lg:flex mt-4 flex-col gap-4 data-[show=true]:hidden"
+      >
+        <p className="max-w-[864px] w-full text-white text-base md:text-xl pr-4 lg:pr-0">
+          Nosso escritório está totalmente equipado para atender às suas
+          necessidades, seja para trabalhar remotamente, realizar reuniões de
+          negócios, ou ministrar formações e aulas.
+        </p>
+        <Button>Reservar Agora</Button>
       </div>
 
-      <p className="text-zinc-800 text-center lg:text-center mx-auto max-w-[600px] ">
-        Venha nos conhecer e descubra como o nosso espaço pode ser o cenário
-        perfeito para suas atividades profissionais e educacionais
-      </p>
+      <div className="mt-9 lg:mt-16 flex items-center gap-4">
+        <Social url="/" image={Instagram} />
+        <Social url="/" image={Instagram} />
+      </div>
     </div>
   )
 }
