@@ -17,6 +17,8 @@ export default function TechnologySlides() {
   const { technologyTime, setTechnologyTime } = useContextAside()
 
   const [show, setShow] = useState(false)
+  const [isVisible, setIsVisible] = useState(true)
+
   const [technologySlides, setTechnologySlides] = useState<
     string | StaticImport
   >(banner01)
@@ -29,25 +31,33 @@ export default function TechnologySlides() {
     }
 
     if (technologyTime === 0) {
+      setIsVisible(true)
       setTimeout(() => {
+        setIsVisible(false)
         setTechnologyTime(1)
         setTechnologySlides(BiskatoBanner)
-      }, 3000)
+      }, 6000)
     } else if (technologyTime === 1) {
+      setIsVisible(true)
       setTimeout(() => {
+        setIsVisible(false)
         setTechnologyTime(2)
         setTechnologySlides(StreamingBanner)
-      }, 3000)
+      }, 6000)
     } else if (technologyTime === 2) {
+      setIsVisible(true)
       setTimeout(() => {
+        setIsVisible(false)
         setTechnologyTime(3)
         setTechnologySlides(CarBanner)
-      }, 3000)
+      }, 6000)
     } else if (technologyTime === 3) {
+      setIsVisible(true)
       setTimeout(() => {
+        setIsVisible(false)
         setTechnologyTime(0)
         setTechnologySlides(banner01)
-      }, 3000)
+      }, 6000)
     }
   }, [pathname, setTechnologySlides, setTechnologyTime, technologyTime])
   return (
@@ -56,13 +66,14 @@ export default function TechnologySlides() {
         src={technologySlides}
         alt="Banner"
         data-show={show}
-        width={1000}
-        height={1000}
-        className="absolute top-0 left-0 right-0 w-full h-screen bg-cover bg-blend-saturation data-[show=false]:hidden"
+        data-isVisible={isVisible}
+        width={1617}
+        height={1080}
+        className="absolute top-0 left-0 right-0 h-screen bg-repeat bg-cover bg-blend-saturation data-[show=false]:hidden data-[isVisible=true]:animate-sideways"
       />
       <div
         data-show={show}
-        className="fixed z-30 bottom-10 left-10 sm:left-16  w-full flex gap-3 items-center data-[show=false]:hidden"
+        className="fixed z-30 bottom-6 left-4 sm:left-16  w-full flex gap-2 lg:gap-3 items-center data-[show=false]:hidden"
       >
         <DotsSlides time={technologyTime} slide={0} />
         <DotsSlides time={technologyTime} slide={1} />

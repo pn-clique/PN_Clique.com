@@ -2,15 +2,16 @@
 import { Clique, PN } from '@/assets/svgs'
 import Image from 'next/image'
 import Link from 'next/link'
-import { useState } from 'react'
+import { usePathname } from 'next/navigation'
 
 export default function Header({ showAside }: { showAside: boolean }) {
-  const [customizeLink, setCustomizeLink] = useState<
-    'tecnologia' | 'coworking'
-  >('tecnologia')
+  const pathname = usePathname()
 
   return (
-    <header className="relative w-full bg-primary rounded-xl px-4 md:px-8 flex justify-between items-center gap-2 xl:gap-8 h-24">
+    <header
+      data-aside={showAside}
+      className="relative w-full bg-primary rounded-xl px-4 md:px-8 flex justify-between items-center gap-2 xl:gap-8 h-24"
+    >
       <div className="flex gap-2 items-center">
         <Image
           src={PN}
@@ -32,15 +33,13 @@ export default function Header({ showAside }: { showAside: boolean }) {
         <nav className="flex items-center gap-4 xl:gap-6">
           <Link
             href={'/'}
-            onClick={() => setCustomizeLink('tecnologia')}
-            className={`text-base lg:text-lg text-secondary active:scale-95 transition-all ${customizeLink === 'tecnologia' && 'font-bold text-lg lg:text-xl text-secondary scale-105 ease-linear'}`}
+            className={`text-base lg:text-lg text-secondary active:scale-95 transition-all ${pathname.toString() === '/' && 'font-bold text-lg lg:text-xl text-secondary scale-105 ease-linear'}`}
           >
             Tecnologia
           </Link>
           <Link
             href={'coworking'}
-            onClick={() => setCustomizeLink('coworking')}
-            className={`text-base lg:text-lg text-white active:scale-95 transition-transform ${customizeLink === 'coworking' && 'font-bold text-lg lg:text-xl text-primary scale-105 ease-linear'}`}
+            className={`text-base lg:text-lg text-white active:scale-95 transition-transform ${pathname.toString().includes('/coworking') && 'font-bold text-lg lg:text-xl text-primary scale-105 ease-linear'}`}
           >
             Coworking
           </Link>

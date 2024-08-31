@@ -11,7 +11,9 @@ export default function Aside() {
   return (
     <aside
       data-aside={showAside}
-      className="relative z-40 flex flex-col justify-start items-center bg-primary sm:rounded-l-3xl px-8 sm:px-28 pt-14 sm:pt-24 h-full  sm:min-h-screen data-[aside=false]:px-1 data-[aside=false]:pt-1 transition-all duration-500 delay-0 ease-linear antialiased animate-sideways w-full"
+      className={`
+        relative z-40 flex flex-col justify-start items-center bg-primary sm:rounded-l-3xl px-8 sm:px-28 pt-14 sm:pt-24 h-full  sm:min-h-screen data-[aside=false]:px-1 data-[aside=false]:pt-1 antialiased w-full ${showAside ? 'animate-fade-in-right' : 'animate-fade-in-left'}
+        `}
     >
       <div data-aside={showAside} className="data-[aside=false]:hidden lg:flex">
         <ButtonAside onClick={handleShowAside} showAside={showAside} />

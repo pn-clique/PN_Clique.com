@@ -14,9 +14,9 @@ export default function Social({ icon, image, url }: SocialProps) {
     <Link
       href={url}
       target="_blank"
-      className="w-12 h-12 rounded-full hover:bg-primary/30 flex justify-center items-center shadow-shape active:scale-95 transition-all"
+      className="w-8 h-8 rounded-full hover:bg-primary/30 flex justify-center items-center shadow-shape active:scale-95 transition-all"
     >
-      {image && <Image src={image} alt="Social" width={20} height={20} />}
+      {image && <Image src={image} alt="Social" width={16} height={16} />}
       {icon && icon}
     </Link>
   )

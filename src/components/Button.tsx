@@ -3,6 +3,7 @@ import React, { ComponentProps, ReactNode } from 'react'
 interface ButtonProps extends ComponentProps<'button'> {
   children: ReactNode
   variant?: 'primary' | 'secondary'
+  width?: number | string
 }
 
 export default function Button({
@@ -13,9 +14,9 @@ export default function Button({
   return (
     <button
       {...rest}
-      className={`shadow-shape w-[140px] h-10 sm:h-[50px] sm:w-40 rounded-3xl flex justify-center items-center  text-sm sm:text-base  active:scale-[.98] transition-all font-medium 
-        ${variant === 'primary' && 'hover:bg-slate-200 bg-white text-primary'}
-        ${variant === 'secondary' && 'hover:bg-slate-200 bg-primary text-white'}
+      className={`w-[140px] flex-1 h-10 sm:h-[50px] sm:w-40 rounded-3xl flex justify-center items-center  text-sm sm:text-base  active:scale-[.98] transition-all font-medium
+        ${variant === 'primary' && 'hover:bg-primary hover:text-white bg-white text-primary ease-in'}
+        ${variant === 'secondary' && 'hover:bg-slate-200 bg-primary text-white hover:text-primary'}
         `}
     >
       {children}
