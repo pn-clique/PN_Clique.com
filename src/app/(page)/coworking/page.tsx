@@ -1,5 +1,7 @@
 'use client'
+import { PN } from '@/assets/svgs'
 import Button from '@/components/Button'
+import Image from 'next/image'
 import { useSearchParams } from 'next/navigation'
 import { Suspense, useEffect, useState } from 'react'
 
@@ -16,7 +18,13 @@ export default function Page() {
   }, [searchParams])
 
   return (
-    <Suspense>
+    <Suspense
+      fallback={
+        <div className="w-full h-screen flex justify-center items-center">
+          <Image src={PN} alt="PN Logo" width={200} height={200} />
+        </div>
+      }
+    >
       <div
         data-show={show}
         className={`relative flex flex-col mt-8 lg:mt-[60px] data-[show=true]:hidden data-[show=true]:lg:flex ${show && 'animate-sideways'}`}
