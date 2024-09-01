@@ -3,7 +3,7 @@ import { Biskato, Instagram, PNCar, PNStreaming } from '@/assets/svgs'
 import Button from '@/components/Button'
 import Social from '@/components/Social'
 import { useContextAside } from '@/contexts/ContextProvider'
-import { Apple } from 'lucide-react'
+import { FaGooglePlay, FaApple } from 'react-icons/fa'
 import Image from 'next/image'
 import Link from 'next/link'
 
@@ -89,11 +89,11 @@ export default function Page() {
             <span className="text-white">Baixe Agora</span>
             <div className="flex gap-4 items-center justify-around sm:justify-start">
               <Button variant="secondary">
-                <Apple className="size-4 mr-1" />
+                <FaGooglePlay size={18} />
                 Play Store
               </Button>
               <Button>
-                <Apple className="size-4 mr-1" />
+                <FaApple size={18} />
                 Apple Store
               </Button>
             </div>

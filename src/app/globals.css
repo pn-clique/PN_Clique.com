@@ -1,3 +1,30 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.custom-image {
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
+
+.tech-image-01 {
+  background-image: url('../assets/images/banner01.png');
+}
+
+.biskato-img {
+  background-image: url('../assets/images/biskato-banner.png');
+}
+
+.pn-streaming-img {
+  background-image: url('../assets/images/pn-streaming.png');
+}
+
+.pn-car-img {
+  background-image: url('../assets/images/pn-car.png');
+}
+
+.coworking-img-01 {
+  background-image: url('../assets/images/coworking-img-01.png');
+}

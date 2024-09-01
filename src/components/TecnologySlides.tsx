@@ -5,10 +5,9 @@ import {
   CarBanner,
   StreamingBanner,
 } from '@/assets/images'
-import { StaticImport } from 'next/dist/shared/lib/get-img-props'
-import Image from 'next/image'
+import { StaticImageData } from 'next/dist/shared/lib/get-img-props'
 import { usePathname } from 'next/navigation'
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import DotsSlides from './DotsSlides'
 import { useContextAside } from '@/contexts/ContextProvider'
 
@@ -19,9 +18,8 @@ export default function TechnologySlides() {
   const [show, setShow] = useState(false)
   const [isVisible, setIsVisible] = useState(true)
 
-  const [technologySlides, setTechnologySlides] = useState<
-    string | StaticImport
-  >(banner01)
+  const [technologySlides, setTechnologySlides] =
+    useState<StaticImageData>(banner01)
 
   useEffect(() => {
     if (pathname.toString() === '/') {
@@ -36,40 +34,41 @@ export default function TechnologySlides() {
         setIsVisible(false)
         setTechnologyTime(1)
         setTechnologySlides(BiskatoBanner)
-      }, 6000)
+      }, 8000)
     } else if (technologyTime === 1) {
       setIsVisible(true)
       setTimeout(() => {
         setIsVisible(false)
         setTechnologyTime(2)
         setTechnologySlides(StreamingBanner)
-      }, 6000)
+      }, 8000)
     } else if (technologyTime === 2) {
       setIsVisible(true)
       setTimeout(() => {
         setIsVisible(false)
         setTechnologyTime(3)
         setTechnologySlides(CarBanner)
-      }, 6000)
+      }, 8000)
     } else if (technologyTime === 3) {
       setIsVisible(true)
       setTimeout(() => {
         setIsVisible(false)
         setTechnologyTime(0)
         setTechnologySlides(banner01)
-      }, 6000)
+      }, 8000)
     }
   }, [pathname, setTechnologySlides, setTechnologyTime, technologyTime])
   return (
     <>
-      <Image
-        src={technologySlides}
-        alt="Banner"
+      <div
         data-show={show}
         data-isVisible={isVisible}
-        width={1617}
-        height={1080}
-        className="absolute top-0 left-0 right-0 h-screen bg-repeat bg-cover bg-blend-saturation data-[show=false]:hidden data-[isVisible=true]:animate-sideways"
+        className={`absolute top-0 left-0 right-0 h-screen bg-repeat bg-cover bg-blend-saturation data-[show=false]:hidden data-[isVisible=true]:animate-sideways custom-image
+          ${technologySlides.src.toString().includes('banner01') && 'tech-image-01'}
+          ${technologySlides.src.toString().includes('biskato') && 'biskato-img'}
+          ${technologySlides.src.toString().includes('streaming') && 'pn-streaming-img'}
+          ${technologySlides.src.toString().includes('car') && 'pn-car-img'}
+        `}
       />
       <div
         data-show={show}

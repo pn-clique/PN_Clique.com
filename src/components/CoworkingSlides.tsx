@@ -1,9 +1,8 @@
 'use client'
-import { banner01, image01, image02 } from '@/assets/images'
-import { StaticImport } from 'next/dist/shared/lib/get-img-props'
-import Image from 'next/image'
+import { banner01, coworkingImg01 } from '@/assets/images'
+import { StaticImageData } from 'next/dist/shared/lib/get-img-props'
 import { usePathname } from 'next/navigation'
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import DotsSlides from './DotsSlides'
 import { useContextAside } from '@/contexts/ContextProvider'
 
@@ -15,9 +14,8 @@ export default function CoworkingSlides() {
   const [show, setShow] = useState(false)
   const [isVisible, setIsVisible] = useState(true)
 
-  const [coworkingSlides, setCoworkingSlides] = useState<string | StaticImport>(
-    image02,
-  )
+  const [coworkingSlides, setCoworkingSlides] =
+    useState<StaticImageData>(coworkingImg01)
 
   useEffect(() => {
     if (pathname.toString().includes('coworking')) {
@@ -31,32 +29,34 @@ export default function CoworkingSlides() {
       setTimeout(() => {
         setIsVisible(false)
         setCoworkingTime(1)
-        setCoworkingSlides(image01)
-      }, 3000)
+        setCoworkingSlides(coworkingImg01)
+      }, 6000)
     } else if (coworkingTime === 1) {
       setIsVisible(true)
       setTimeout(() => {
         setIsVisible(false)
         setCoworkingTime(2)
-        setCoworkingSlides(image02)
-      }, 3000)
+        setCoworkingSlides(banner01)
+      }, 6000)
     } else if (coworkingTime === 2) {
       setIsVisible(true)
       setTimeout(() => {
         setIsVisible(false)
         setCoworkingTime(0)
-        setCoworkingSlides(banner01)
-      }, 3000)
+        setCoworkingSlides(coworkingImg01)
+      }, 6000)
     }
   }, [pathname, setCoworkingSlides, setCoworkingTime, coworkingTime])
   return (
     <>
-      <Image
-        src={coworkingSlides}
-        alt="Banner"
+      <div
         data-show={show}
         data-isVisible={isVisible}
-        className="absolute top-0 left-0 right-0 w-full h-screen bg-cover bg-blend-saturation data-[show=false]:hidden data-[isVisible=true]:animate-sideways"
+        className={`absolute top-0 left-0 right-0 h-screen bg-repeat bg-cover bg-blend-saturation data-[show=false]:hidden data-[isVisible=true]:animate-sideways custom-image
+          ${coworkingSlides.src.toString().includes('coworking-img-01') && 'coworking-img-01'}
+          ${coworkingSlides.src.toString().includes('banner01') && 'tech-image-01'}
+          ${coworkingSlides.src.toString().includes('coworking-img-01') && 'coworking-img-01'}
+        `}
       />
       <div
         data-show={show}
