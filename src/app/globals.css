@@ -25,6 +25,14 @@
   background-image: url('../assets/images/pn-car.png');
 }
 
+.sg-banner {
+  background-image: url('../assets/images/sg-banner.png');
+}
+
+.other-projects {
+  background-image: url('../assets/images/other-projects.png');
+}
+
 .coworking-img-01 {
   background-image: url('../assets/images/coworking-img-01.png');
 }

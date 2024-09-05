@@ -3,8 +3,8 @@ import ButtonAside from './ButtonAside'
 import AboutItem from './About-Item'
 import Button from './Button'
 import Social from './Social'
-import { Instagram } from '@/assets/svgs'
 import { useContextAside } from '@/contexts/ContextProvider'
+import { FaFacebook, FaInstagram, FaWhatsapp } from 'react-icons/fa'
 
 export default function Aside() {
   const { showAside, handleShowAside } = useContextAside()
@@ -66,9 +66,18 @@ export default function Aside() {
           Siga-nos nas redes
         </h4>
         <div className="flex justify-start gap-2 lg:gap-5 mt-3 lg:mt-6 items-start w-full">
-          <Social url="/" image={Instagram} />
-          <Social url="/" image={Instagram} />
-          <Social url="/" image={Instagram} />
+          <Social
+            url="https://web.facebook.com/pnclique/"
+            icon={<FaFacebook size={20} color="#fff" />}
+          />
+          <Social
+            url="https://api.whatsapp.com/send?phone=%2B244934147576"
+            icon={<FaWhatsapp size={20} color="#fff" />}
+          />
+          <Social
+            url="https://www.instagram.com/pnclique/"
+            icon={<FaInstagram size={20} color="#fff" />}
+          />
         </div>
 
         <footer className="lg:absolute relative bottom-4 w-full max-w-[810px] mt-20 left-1/2 -translate-x-1/2 lg:mt-10">

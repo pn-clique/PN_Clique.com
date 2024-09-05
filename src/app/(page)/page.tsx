@@ -1,5 +1,5 @@
 'use client'
-import { Biskato, PNCar, PNStreaming } from '@/assets/svgs'
+import { Biskato, CliqueSG, PNCar, PNStreaming } from '@/assets/svgs'
 import Button from '@/components/Button'
 import Social from '@/components/Social'
 import { useContextAside } from '@/contexts/ContextProvider'
@@ -52,9 +52,18 @@ export default function Page() {
           </div>
 
           <div className="mt-6 lg:mt-10 flex items-center gap-4">
-            <Social url="/" icon={<FaFacebook size={20} color="#fff" />} />
-            <Social url="/" icon={<FaWhatsapp size={20} color="#fff" />} />
-            <Social url="/" icon={<FaInstagram size={20} color="#fff" />} />
+            <Social
+              url="https://web.facebook.com/pnclique/"
+              icon={<FaFacebook size={20} color="#fff" />}
+            />
+            <Social
+              url="https://api.whatsapp.com/send?phone=%2B244934147576"
+              icon={<FaWhatsapp size={20} color="#fff" />}
+            />
+            <Social
+              url="https://www.instagram.com/pnclique/"
+              icon={<FaInstagram size={20} color="#fff" />}
+            />
           </div>
         </div>
       )}
@@ -121,7 +130,7 @@ export default function Page() {
             equipamentos.
           </p>
           <Link
-            href={'/'}
+            href={'https://streaming.pnclique.com/'}
             target="_blank"
             className="text-sm md:text-base text-red-600 mt-2 lg:mt-6 underline"
           >
@@ -150,9 +159,72 @@ export default function Page() {
             em família, casamento ou filmagens. Tudo online, sem sair de casa..
           </p>
           <Link
-            href={'/'}
+            href={'https://car.pnclique.com/'}
             target="_blank"
             className="text-sm md:text-xl text-orange-500 underline mt-4"
+          >
+            Saiba mais
+          </Link>
+        </div>
+      )}
+
+      {technologyTime === 4 && (
+        <div
+          data-show={showAside}
+          className={`relative flex flex-col mt-2 sm:mt-8 lg:mt-[60px] data-[show=true]:hidden data-[show=true]:lg:flex ${technologyTime === 4 && 'animate-sideways'}`}
+        >
+          <Image
+            src={CliqueSG}
+            alt="Clique SG"
+            width={161}
+            height={60}
+            className="max-w-[120px] sm:max-w-[160px]"
+          />
+          <h1 className="text-primary mt-2 lg:mt-6 text-[40px] lg:text-4xl tracking-wide font-semibold leading-relaxed">
+            Clique SG
+          </h1>
+          <p className="max-w-[864px] w-full text-white text-base md:text-xl mt-2 lg:mt-10 pr-4 lg:pr-0">
+            Responsavel por upgrade aos centros de formação. Um software que
+            facilita o controle, gestão e emisão de documentos dos centros de
+            formação.
+          </p>
+          <Link
+            href={'/'}
+            target="_blank"
+            className="text-sm md:text-xl text-primary underline mt-4 hidden"
+          >
+            Saiba mais
+          </Link>
+        </div>
+      )}
+
+      {technologyTime === 5 && (
+        <div
+          data-show={showAside}
+          className={`relative flex flex-col mt-2 sm:mt-8 lg:mt-[60px] data-[show=true]:hidden data-[show=true]:lg:flex ${technologyTime === 5 && 'animate-sideways'}`}
+        >
+          <span className="text-white mt-2 lg:mt-6 text-lg tracking-wide font-semibold leading-relaxed">
+            Brevemente
+          </span>
+          <h1 className="text-primary mt-1 text-[32px] lg:text-4xl tracking-wide font-semibold leading-relaxed">
+            Mais plataformas
+          </h1>
+          <p className="max-w-[864px] w-full text-white text-base md:text-xl mt-2 lg:mt-10 pr-4 lg:pr-0">
+            Nesse momento, além de continuar a desenvolver atualizações dos
+            nossos apps. Estão a construir dois novos, que vão eliminar todas as
+            burocracias de sua vida financeira e torna-te um empreendedor
+            melhor.
+          </p>
+
+          <span className="flex gap-2 items-center mt-6 text-white text-sm">
+            <span className="text-orange-500 text-lg">100 filas</span>&
+            <span className="text-primary text-lg">SociAi</span>
+          </span>
+
+          <Link
+            href={'/'}
+            target="_blank"
+            className="text-sm md:text-xl text-primary underline mt-4 hidden"
           >
             Saiba mais
           </Link>
