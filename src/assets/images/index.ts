@@ -6,6 +6,7 @@ import StreamingBanner from './pn-streaming.png'
 import CarBanner from './pn-car.png'
 import SGBanner from './pn-sg.png'
 import coworkingImg01 from './coworking-img-01.png'
+import otherProjects from './other-projects.png'
 
 export {
   BiskatoBanner,
@@ -16,4 +17,5 @@ export {
   CarBanner,
   SGBanner,
   coworkingImg01,
+  otherProjects,
 }

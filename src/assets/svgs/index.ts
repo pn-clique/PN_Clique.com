@@ -4,5 +4,6 @@ import Biskato from './biskato.svg'
 import Instagram from './instagram.svg'
 import PNStreaming from './pn-streaming.svg'
 import PNCar from './pn-car.svg'
+import CliqueSG from './clique-sg.svg'
 
-export { PN, Clique, Biskato, Instagram, PNStreaming, PNCar }
+export { PN, Clique, Biskato, Instagram, PNStreaming, PNCar, CliqueSG }
