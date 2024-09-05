@@ -33,13 +33,13 @@ export default function Header({ showAside }: { showAside: boolean }) {
         <nav className="flex items-center gap-4 xl:gap-6">
           <Link
             href={'/'}
-            className={`text-base lg:text-lg text-secondary active:scale-95 transition-all ${pathname.toString() === '/' && 'font-bold text-lg lg:text-xl text-secondary scale-105 ease-linear'}`}
+            className={`text-base lg:text-lg active:scale-95 transition-all ${pathname.toString() === '/' ? 'font-bold text-lg lg:text-xl text-secondary scale-105 ease-linear' : 'text-white'}`}
           >
             Tecnologia
           </Link>
           <Link
             href={'coworking'}
-            className={`text-base lg:text-lg text-white active:scale-95 transition-transform ${pathname.toString().includes('/coworking') && 'font-bold text-lg lg:text-xl text-primary scale-105 ease-linear'}`}
+            className={`text-base lg:text-lg active:scale-95 transition-transform ${pathname.toString().includes('/coworking') ? 'font-bold text-lg lg:text-xl text-secondary scale-105 ease-linear' : 'text-white'}`}
           >
             Coworking
           </Link>

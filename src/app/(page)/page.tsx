@@ -1,9 +1,15 @@
 'use client'
-import { Biskato, Instagram, PNCar, PNStreaming } from '@/assets/svgs'
+import { Biskato, PNCar, PNStreaming } from '@/assets/svgs'
 import Button from '@/components/Button'
 import Social from '@/components/Social'
 import { useContextAside } from '@/contexts/ContextProvider'
-import { FaGooglePlay, FaApple } from 'react-icons/fa'
+import {
+  FaGooglePlay,
+  FaApple,
+  FaFacebook,
+  FaWhatsapp,
+  FaInstagram,
+} from 'react-icons/fa'
 import Image from 'next/image'
 import Link from 'next/link'
 
@@ -46,9 +52,9 @@ export default function Page() {
           </div>
 
           <div className="mt-6 lg:mt-10 flex items-center gap-4">
-            <Social url="/" image={Instagram} />
-            <Social url="/" image={Instagram} />
-            <Social url="/" image={Instagram} />
+            <Social url="/" icon={<FaFacebook size={20} color="#fff" />} />
+            <Social url="/" icon={<FaWhatsapp size={20} color="#fff" />} />
+            <Social url="/" icon={<FaInstagram size={20} color="#fff" />} />
           </div>
         </div>
       )}

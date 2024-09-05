@@ -25,7 +25,8 @@ export default function Layout({ children }: { children: ReactNode }) {
       </>
       {/* MAIN SECTION */}
       <section
-        className={`relative z-40 flex flex-1 flex-col gap-8 pt-8 xl:px-20 h-full px-4 ${showAside ? 'animate-main-section-reserve sm:animate-none' : 'animate-main-section sm:animate-none'}`}
+        className={`relative z-40 flex flex-1 flex-col gap-8 pt-8 xl:px-20 h-full px-4 
+          ${showAside ? 'animate-main-section-reserve sm:animate-none' : 'animate-main-section sm:animate-none'}`}
       >
         <div className={`${showAside && 'hidden'}`}>
           <ButtonAside onClick={handleShowAside} showAside={showAside} />
