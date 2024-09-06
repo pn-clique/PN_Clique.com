@@ -67,7 +67,7 @@ export default function Aside() {
           Formulário
         </Button>
 
-        <h4 className="font-bold text-xl sm:text-2xl text-white mt-10 lg:mt-14">
+        <h4 className="font-bold text-xl sm:text-2xl text-white mt-10 lg:mt-14 tracking-wider">
           Siga-nos nas redes
         </h4>
         <div className="flex justify-start gap-2 lg:gap-5 mt-3 lg:mt-6 items-start w-full">
