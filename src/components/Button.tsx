@@ -20,8 +20,8 @@ export default function Button({
       {...rest}
       href={url}
       className={`w-[140px] flex-1 h-10 gap-2 lg:max-w-[160px] sm:h-[50px] sm:w-40 rounded-3xl flex justify-center items-center  text-sm sm:text-base  active:scale-[.98] transition-all font-medium
-        ${variant === 'primary' && 'hover:bg-primary hover:text-white bg-white text-primary ease-in'}
-        ${variant === 'secondary' && 'hover:bg-slate-200 bg-primary text-white hover:text-primary'}
+        ${variant === 'primary' && 'bg-white/40 hover:text-primary hover:bg-white text-white ease-in'}
+        ${variant === 'secondary' && 'bg-primary/40 hover:bg-primary hover:text-white text-primary'}
         `}
     >
       {children}

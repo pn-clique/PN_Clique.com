@@ -21,8 +21,7 @@ export default function CoworkingSlides() {
     <>
       <div
         data-show={show}
-        data-isVisible={isVisible}
-        className={`absolute top-0 left-0 right-0 h-screen bg-repeat bg-cover bg-blend-saturation data-[show=false]:hidden data-[isVisible=true]:animate-sideways custom-image coworking-img-01`}
+        className={`absolute top-0 left-0 right-0 h-screen bg-repeat bg-cover bg-blend-saturation data-[show=false]:hidden custom-image coworking-img-01 ${isVisible && 'animate-sideways'}`}
       />
     </>
   )

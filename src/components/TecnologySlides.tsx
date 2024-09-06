@@ -51,8 +51,8 @@ export default function TechnologySlides() {
     <>
       <div
         data-show={show}
-        data-isVisible={isVisible}
-        className={`absolute top-0 left-0 right-0 h-screen bg-repeat bg-cover bg-blend-saturation data-[show=false]:hidden data-[isVisible=true]:animate-sideways custom-image
+        className={`absolute top-0 left-0 right-0 h-screen bg-repeat bg-cover bg-blend-saturation data-[show=false]:hidden custom-image
+          ${isVisible && 'animate-sideways'}
           ${technologyTime === 0 && 'tech-image-01'}
           ${technologyTime === 1 && 'biskato-img'}
           ${technologyTime === 2 && 'pn-streaming-img'}
