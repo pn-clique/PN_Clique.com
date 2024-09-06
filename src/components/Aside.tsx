@@ -60,7 +60,12 @@ export default function Aside() {
           para iniciar essa jornada conosco..
         </p>
 
-        <Button>Formulário</Button>
+        <Button
+          url={'https://bojaoluqyj1.typeform.com/to/LyUlUNQP'}
+          target="_blank"
+        >
+          Formulário
+        </Button>
 
         <h4 className="font-bold text-xl sm:text-2xl text-white mt-10 lg:mt-14">
           Siga-nos nas redes

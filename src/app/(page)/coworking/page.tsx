@@ -32,7 +32,9 @@ export default function Page() {
         negócios, ou ministrar formações e aulas.
       </p>
       <div className="w-full lg:max-w-[160px] mt-8">
-        <Button>Reservar Agora</Button>
+        <Button url={'https://coworking.pnclique.com/booking'} target="_blank">
+          Reservar Agora
+        </Button>
       </div>
     </div>
   )

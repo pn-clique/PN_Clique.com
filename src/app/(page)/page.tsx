@@ -47,7 +47,12 @@ export default function Page() {
               ficaremos felizes em colaborar...
             </p>
             <div className="w-full lg:max-w-[160px]">
-              <Button>Formulário</Button>
+              <Button
+                url={'https://bojaoluqyj1.typeform.com/to/LyUlUNQP'}
+                target="_blank"
+              >
+                Formulário
+              </Button>
             </div>
           </div>
 
@@ -93,7 +98,7 @@ export default function Page() {
             de forma eficiente e segura.
           </p>
           <Link
-            href={'/'}
+            href={'https://biskato.ao/'}
             target="_blank"
             className="text-sm md:text-base text-primary mt-2 lg:mt-6 underline"
           >
@@ -103,11 +108,11 @@ export default function Page() {
           <div className="w-full flex flex-col gap-4 mt-3 lg:mt-8">
             <span className="text-white">Baixe Agora</span>
             <div className="flex gap-4 items-center justify-around sm:justify-start">
-              <Button variant="secondary">
+              <Button url={'/'} variant="secondary">
                 <FaGooglePlay size={18} />
                 Play Store
               </Button>
-              <Button>
+              <Button url={'/'}>
                 <FaApple size={18} />
                 Apple Store
               </Button>
