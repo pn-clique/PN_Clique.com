@@ -20,12 +20,12 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang='pt-PT'>
+    <html lang="pt-PT">
       <head>
-        <link href='/favicon.ico' rel='icon' sizes='32x32' />
+        <link href="/favicon.ico" rel="icon" sizes="32x32" />
         <meta
-          name='google-site-verification'
-          content='Vsx1PTIBGdl2s7Bt4oGCIDBbtbIRorCnJtyHD__8DJg'
+          name="google-site-verification"
+          content="Vsx1PTIBGdl2s7Bt4oGCIDBbtbIRorCnJtyHD__8DJg"
         />
       </head>
       <body className={inter.className}>
