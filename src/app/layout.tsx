@@ -23,6 +23,7 @@ export default function RootLayout({
     <html lang="pt-PT">
       <head>
         <link href="/favicon.ico" rel="icon" sizes="32x32" />
+        <meta name="google-site-verification" content="Vsx1PTIBGdl2s7Bt4oGCIDBbtbIRorCnJtyHD__8DJg" />
       </head>
       <body className={inter.className}>
         <Provider>{children}</Provider>
